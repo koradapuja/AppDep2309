@@ -32,7 +32,7 @@ let reqOption={
     body:dataToSendInJSON,
     headers:myHeader,
 };
-let JSONData=await fetch("http://localhost:4567/signup",reqOption);
+let JSONData=await fetch("/signup",reqOption);
 let JSOData= await JSONData.json();
 console.log(JSOData);
     }
@@ -54,7 +54,7 @@ console.log(JSOData);
     body:dataToSend,
     headers:myHeader,
   }
-  let JSONData=await fetch("http://localhost:4567/signup",reqOption);
+  let JSONData=await fetch("/signup",reqOption);
   let JSOData= await JSONData.json();
   console.log(JSOData);
   }
@@ -75,7 +75,7 @@ for(let i=0;i<profilePicInputRef.current.files.length;i++){
     method:"POST",
     body:dataToSend,
   }
-  let JSONData=await fetch("http://localhost:4567/signup",reqOption);
+  let JSONData=await fetch("/signup",reqOption);
   let JSOData= await JSONData.json();
   if(JSOData.status == "success"){
     alert(JSOData.msg);

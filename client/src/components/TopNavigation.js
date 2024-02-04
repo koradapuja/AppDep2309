@@ -20,7 +20,7 @@ let deleteProfile= async()=>{
     method:"DELETE",
  };
 
-let url=`http://localhost:4567/deleteProfile?
+let url=`/deleteProfile?
 email=${storeObj.loginDetails.email}`;
 let JSONData = await fetch(url,reqOptions);
 let JSOData= await JSONData.json();

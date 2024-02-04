@@ -23,7 +23,7 @@ useEffect(()=>{
   emailInputRef.current.value=storeObj.loginDetails.email;
   // passwordInputRef.current.value=storeObj.loginDetails.password;
   phoneNumberInputRef.current.value=storeObj.loginDetails.phoneNumber;
-  setProfilePicPath(`http://localhost:4567/${storeObj.loginDetails.profilePic}`);
+  setProfilePicPath(`/${storeObj.loginDetails.profilePic}`);
 },[])
   let  sendUpdateDataToServerThurFD= async()=>{
     let dataToSend=new FormData();
@@ -42,7 +42,7 @@ for(let i=0;i<profilePicInputRef.current.files.length;i++){
     method:"PUT",
     body:dataToSend,
   }
-  let JSONData=await fetch("http://localhost:4567/updateProfile",reqOption);
+  let JSONData=await fetch("/updateProfile",reqOption);
   let JSOData= await JSONData.json();
   if(JSOData.status == "success"){
     alert(JSOData.msg);

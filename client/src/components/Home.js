@@ -12,7 +12,7 @@ console.log("inside home");
         <TopNavigation/>
        
         <h1>welcome   {storeObj.loginDetails.firstName}{storeObj.loginDetails.lastName}</h1>
-<img src={`http://localhost:4567/${storeObj.loginDetails.profilePic}`}></img>
+<img src={`/${storeObj.loginDetails.profilePic}`}></img>
         </div>
   )
 }
